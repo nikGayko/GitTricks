@@ -1,4 +1,11 @@
 #!/bin/sh
+# 
+# This git hook appends branch name to commit message
+# You type: "bug fixed"
+# You get: "[hot-fix-1] bug fixed"
+# 
+# Put this file into './.git/hooks' folder
+# Or insert lines below to 'prepare-commit-msg.sample' and rename it to 'prepare-commit-msg'
 
 if [ -z "$BRANCHES_TO_SKIP" ]; then
   BRANCHES_TO_SKIP=(master develop)
